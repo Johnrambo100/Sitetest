@@ -2,61 +2,70 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>À propos | KAY MP Nettoyage</title>
+  <meta name="description" content="Entreprise KAY MP Nettoyage : propreté, finitions, réactivité. Montauban & Occitanie." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header class="topbar">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <div class="logoWrap">
-        <img class="logoImg" src="images/logo.jpg" alt="Logo">
-      </div>
-      <div class="title">
-        <b>KAY MP Nettoyage</b>
-        <span>Entreprise professionnelle</span>
-      </div>
-    </a>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logoWrap" id="logoWrap">
+          <img class="logoImg" id="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage" data-open-logo
+               onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='grid';" />
+          <div id="logoFallback" class="logoFallback" style="display:none;">
+            <span class="logoMark">🪶</span>
+            <span class="logoText">KAY MP</span>
+            <span class="logoSub">Nettoyage</span>
+          </div>
+        </div>
+        <div class="title">
+          <b>KAY MP Nettoyage</b>
+          <span>Propreté • Finitions • Réactivité</span>
+        </div>
+      </a>
+
+      <button id="burgerBtn" class="hamburger" type="button" aria-label="Menu">☰</button>
+
+      <nav class="navlinks" id="navMenu">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html" class="btn primary">🚀 Devis express</a>
+      </nav>
+    </div>
   </div>
 </header>
 
-<main class="section container">
-
-  <div class="card">
-    <h1>À propos</h1>
-    <p class="lead">Entreprise spécialisée dans le nettoyage professionnel.</p>
+<main class="section">
+  <div class="container">
+    <div class="card">
+      <h1 class="h1">À propos</h1>
+      <p class="lead">Entreprise spécialisée dans le nettoyage professionnel.</p>
+    </div>
   </div>
-
-  <section class="card" id="ecoBlock" style="display:none;">
-    <h2>🌱 Éco-responsable</h2>
-    <p id="ecoText"></p>
-  </section>
-
-  <section class="card" id="assoBlock" style="display:none;">
-    <h2>🤝 Associations</h2>
-    <p id="assoText"></p>
-  </section>
-
-  <section class="card" id="partnersBlock" style="display:none;">
-    <h2>🏢 Partenaires</h2>
-    <div id="partnersGrid" class="partnersGrid"></div>
-  </section>
-
-  <section class="card" id="mediaBlock" style="display:none;">
-    <h2>📺 Médias</h2>
-    <div id="mediaGrid" class="mediaGrid"></div>
-  </section>
-
 </main>
 
 <footer class="footer">
-  <div class="container footerRow">
-    <div>© <span id="y"></span></div>
-    <div id="socialLinks" class="social"></div>
+  <div class="container">
+    <div>© <span id="y"></span> KAY MP Nettoyage.</div>
   </div>
 </footer>
 
+<!-- Modal logo -->
+<div class="modal" id="logoModal" aria-hidden="true">
+  <div class="modalBox">
+    <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage (grand)" onerror="this.closest('.modal').classList.remove('open');" />
+    <div class="modalBar">
+      <div class="small">Logo KAY MP Nettoyage</div>
+      <button class="closeBtn" id="closeLogo">Fermer</button>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
-</html>
+          </html>
