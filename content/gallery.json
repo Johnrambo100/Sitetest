@@ -1,0 +1,16 @@
+{
+  "interieur": [
+    "images/interieur/int-01.jpg",
+    "images/interieur/int-02.jpg"
+  ],
+  "exterieur": [
+    "images/exterieur/ext-01.jpg",
+    "images/exterieur/ext-02.jpg"
+  ],
+  "avant_apres": [
+    {
+      "avant": "images/avantapres/avant-01.jpg",
+      "apres": "images/avantapres/apres-01.jpg"
+    }
+  ]
+}
