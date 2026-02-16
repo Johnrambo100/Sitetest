@@ -1,8 +1,22 @@
 {
-  "instagram":"",
-  "tiktok":"",
-  "facebook":"",
-  "ecoText":"Entreprise éco-responsable.",
-  "assoText":"Nous aidons les associations.",
-  "media":[]
+  "name": "KAY MP Nettoyage",
+  "tagline": "Propreté • Finitions • Réactivité",
+  "heroTitle": "Nettoyage impeccable, prêt à livrer.",
+  "heroText": "Intervention en <strong>Occitanie</strong>, principalement <strong>Montauban & alentours</strong>. Nettoyage <strong>fin de chantier</strong>, <strong>remise en état</strong>, vitres, bureaux + extérieur.",
+  "social": {
+    "instagram": "https://instagram.com/",
+    "tiktok": "https://tiktok.com/",
+    "facebook": "https://facebook.com/"
+  },
+  "media": [
+    {
+      "title": "Notre vidéo Instagram",
+      "url": "https://instagram.com/"
+    },
+    {
+      "title": "Notre TikTok",
+      "url": "https://tiktok.com/"
+    }
+  ],
+  "association": "Nous aidons des associations locales (exemple : dons de vêtements pour soutenir l’emploi associatif)."
 }
