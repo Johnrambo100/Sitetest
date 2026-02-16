@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Réalisations | KAY MP Nettoyage</title>
-  <meta name="description" content="Photos avant/après, intérieur, extérieur. Réalisations KAY MP Nettoyage à Montauban." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Galerie : intérieur, extérieur, avant/après. Ajout facile via gallery.json."/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -13,26 +13,20 @@
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-        <div class="logoWrap" id="logoWrap">
-          <img class="logoImg" id="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage" data-open-logo
-               onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='grid';" />
-          <div id="logoFallback" class="logoFallback" style="display:none;">
-            <span class="logoMark">🪶</span>
-            <span class="logoText">KAY MP</span>
-            <span class="logoSub">Nettoyage</span>
-          </div>
+        <div class="logoWrap">
+          <img class="logoImg" src="images/logo.jpg" alt="Logo" onerror="this.style.display='none'; this.parentElement.classList.add('noLogo'); this.parentElement.innerHTML='Logo';"/>
         </div>
         <div class="title">
-          <b>KAY MP Nettoyage</b>
-          <span>Propreté • Finitions • Réactivité</span>
+          <b id="siteName">KAY MP Nettoyage</b>
+          <span id="siteTagline">Propreté • Finitions • Réactivité</span>
         </div>
       </a>
 
-      <button id="burgerBtn" class="hamburger" type="button" aria-label="Menu">☰</button>
+      <button id="burgerBtn" class="hamburger" type="button">☰</button>
 
       <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
-        <a href="realisations.html">Réalisations</a>
+        <a href="realisations.html" class="active">Réalisations</a>
         <a href="apropos.html">À propos</a>
         <a href="contact.html" class="btn primary">🚀 Devis express</a>
       </nav>
@@ -42,30 +36,58 @@
 
 <main class="section">
   <div class="container">
+
     <div class="card">
-      <h1 class="h1">Réalisations</h1>
-      <p class="lead">La galerie sera ajoutée à l’étape suivante (JSON + catégories + avant/après).</p>
+      <h1 class="h1">Nos réalisations</h1>
+      <p class="lead">Le client peut ajouter/supprimer des photos en modifiant uniquement <code>content/gallery.json</code>.</p>
+
+      <div style="height:10px"></div>
+      <div class="filters" id="filters">
+        <button class="chipBtn active" data-tab="interieur">Intérieur</button>
+        <button class="chipBtn" data-tab="exterieur">Extérieur</button>
+        <button class="chipBtn" data-tab="avantapres">Avant / Après</button>
+      </div>
     </div>
+
+    <div style="height:16px"></div>
+
+    <section class="tab" id="tab-interieur">
+      <h2 class="h2">✨ Intérieur</h2>
+      <div id="galerie-interieur" class="gallery"></div>
+      <p class="empty" id="empty-interieur" style="display:none;">Photos à venir.</p>
+    </section>
+
+    <section class="tab" id="tab-exterieur" style="display:none;">
+      <h2 class="h2">🌿 Extérieur</h2>
+      <div id="galerie-exterieur" class="gallery"></div>
+      <p class="empty" id="empty-exterieur" style="display:none;">Photos à venir.</p>
+    </section>
+
+    <section class="tab" id="tab-avantapres" style="display:none;">
+      <h2 class="h2">🔁 Avant / Après</h2>
+      <div id="galerie-avantapres" class="beforeAfter"></div>
+      <p class="empty" id="empty-avantapres" style="display:none;">Avant/Après à venir.</p>
+    </section>
+
   </div>
 </main>
 
 <footer class="footer">
   <div class="container">
-    <div>© <span id="y"></span> KAY MP Nettoyage.</div>
+    <div>© <span id="y"></span> <span id="footerName">KAY MP Nettoyage</span>.</div>
   </div>
 </footer>
 
-<!-- Modal logo -->
-<div class="modal" id="logoModal" aria-hidden="true">
+<div class="modal" id="imgModal" aria-hidden="true">
   <div class="modalBox">
-    <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage (grand)" onerror="this.closest('.modal').classList.remove('open');" />
+    <img id="modalImg" src="" alt="Agrandissement"/>
     <div class="modalBar">
-      <div class="small">Logo KAY MP Nettoyage</div>
-      <button class="closeBtn" id="closeLogo">Fermer</button>
+      <div class="small" id="modalCap">Photo</div>
+      <button class="closeBtn" id="closeModal">Fermer</button>
     </div>
   </div>
 </div>
 
 <script src="script.js"></script>
 </body>
-              </html>
+</html>
