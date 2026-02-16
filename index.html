@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KAY MP Nettoyage | Accueil</title>
-  <meta name="description" content="Nettoyage fin de chantier, remise en état, vitres, bureaux, extérieur. Intervention à Montauban et Occitanie." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KAY MP Nettoyage | Montauban</title>
+  <meta name="description" content="Nettoyage fin de chantier, remise en état, vitres, bureaux, intérieur/extérieur. Montauban & Occitanie. Devis express WhatsApp."/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -13,18 +13,12 @@
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-        <div class="logoWrap" id="logoWrap">
-          <img class="logoImg" id="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage" data-open-logo
-               onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='grid';" />
-          <div id="logoFallback" class="logoFallback" style="display:none;">
-            <span class="logoMark">🪶</span>
-            <span class="logoText">KAY MP</span>
-            <span class="logoSub">Nettoyage</span>
-          </div>
+        <div class="logoWrap">
+          <img class="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage" onerror="this.style.display='none'; this.parentElement.classList.add('noLogo'); this.parentElement.innerHTML='Logo';"/>
         </div>
         <div class="title">
-          <b>KAY MP Nettoyage</b>
-          <span>Propreté • Finitions • Réactivité</span>
+          <b id="siteName">KAY MP Nettoyage</b>
+          <span id="siteTagline">Propreté • Finitions • Réactivité</span>
         </div>
       </a>
 
@@ -43,42 +37,93 @@
 <main class="section">
   <div class="container">
 
-    <div class="card">
-      <h1 class="h1">Nettoyage professionnel à Montauban</h1>
-      <p class="lead">
-        Fin de chantier • Remise en état • Intérieur • Extérieur<br/>
-        Intervention en <strong>Occitanie</strong>, surtout <strong>Montauban & alentours</strong>.
-      </p>
+    <section class="hero card">
+      <div class="heroGrid">
+        <div>
+          <h1 class="h1" id="heroTitle">Nettoyage impeccable, prêt à livrer.</h1>
+          <p class="lead" id="heroText">
+            Intervention en <strong>Occitanie</strong>, principalement <strong>Montauban & alentours</strong>.
+            Fin de chantier, remise en état, vitres, bureaux, intérieur + extérieur.
+          </p>
 
-      <div style="height:14px"></div>
+          <div class="btnrow">
+            <a class="btn primary" id="btnDevis" href="contact.html">🚀 Devis express</a>
+            <a class="btn success" id="btnWhatsapp" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
+            <a class="btn" id="btnTel" href="tel:+33644972892">📞 Appeler</a>
+          </div>
 
-      <div class="btnrow">
-        <a class="btn primary" href="contact.html">🚀 Devis express</a>
-        <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a class="btn" href="tel:+33644972892">📞 Appeler</a>
+          <div class="chips">
+            <span class="chip">✅ Réponse rapide</span>
+            <span class="chip">✅ Finitions soignées</span>
+            <span class="chip">✅ Particuliers & pros</span>
+          </div>
+        </div>
+
+        <div class="heroCard">
+          <div class="heroCardTitle">Ce qu’on fait le plus</div>
+          <ul class="bullets" id="homeBullets">
+            <li>Fin de chantier (appartements, maisons, locaux)</li>
+            <li>Remise en état avant location / vente</li>
+            <li>Vitres & vérandas</li>
+            <li>Extérieur : tonte, élagage, évacuation</li>
+          </ul>
+          <div class="notice">
+            <strong>Astuce devis :</strong> 2–3 photos + surface + ville → réponse rapide.
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <div style="height:18px"></div>
+
+    <section class="split">
+      <div class="card">
+        <h2 class="h2">Pourquoi nous choisir</h2>
+        <div class="servicesGrid">
+          <div class="service">
+            <div class="icon">🧼</div>
+            <h3>Propreté</h3>
+            <p>Résultat net, prêt à livrer.</p>
+          </div>
+          <div class="service">
+            <div class="icon">⚡</div>
+            <h3>Réactivité</h3>
+            <p>Créneaux rapides et adaptables.</p>
+          </div>
+          <div class="service">
+            <div class="icon">🧾</div>
+            <h3>Devis clair</h3>
+            <p>WhatsApp ou formulaire, réponse rapide.</p>
+          </div>
+          <div class="service">
+            <div class="icon">🌿</div>
+            <h3>Éco-responsable</h3>
+            <p>Tri, réduction déchets, produits adaptés.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card soft">
+        <h2 class="h2">Réseaux sociaux</h2>
+        <p class="small">Ajoute tes liens dans <code>content/site.json</code>.</p>
+        <div class="socialRow" id="socialRow"></div>
+
+        <div style="height:14px"></div>
+        <h2 class="h2">Partenaires</h2>
+        <p class="small">Le client gère dans <code>content/partners.json</code>.</p>
+        <div class="partnersRow" id="partnersRow"></div>
+      </aside>
+    </section>
 
   </div>
 </main>
 
 <footer class="footer">
   <div class="container">
-    <div>© <span id="y"></span> KAY MP Nettoyage — Montauban & Occitanie.</div>
+    <div>© <span id="y"></span> <span id="footerName">KAY MP Nettoyage</span> — Montauban & Occitanie.</div>
   </div>
 </footer>
 
-<!-- Modal logo -->
-<div class="modal" id="logoModal" aria-hidden="true">
-  <div class="modalBox">
-    <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage (grand)" onerror="this.closest('.modal').classList.remove('open');" />
-    <div class="modalBar">
-      <div class="small">Logo KAY MP Nettoyage</div>
-      <button class="closeBtn" id="closeLogo">Fermer</button>
-    </div>
-  </div>
-</div>
-
 <script src="script.js"></script>
 </body>
-  </html>
+</html>
