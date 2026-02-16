@@ -1,1 +1,12 @@
-{ "items":[] }
+[
+  {
+    "name": "Partenaire 1",
+    "logo": "images/partners/p1.jpg",
+    "url": "https://example.com"
+  },
+  {
+    "name": "Partenaire 2",
+    "logo": "images/partners/p2.jpg",
+    "url": ""
+  }
+]
