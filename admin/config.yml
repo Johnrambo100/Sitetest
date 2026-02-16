@@ -1,0 +1,92 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # Réglages du site (réseaux + engagements + médias)
+  - name: "site"
+    label: "Réglages du site"
+    files:
+      - name: "settings"
+        label: "Réseaux • Engagements • Médias"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "Lien Instagram", name: "instagram", widget: "string", required: false }
+          - { label: "Lien TikTok", name: "tiktok", widget: "string", required: false }
+          - { label: "Lien Facebook", name: "facebook", widget: "string", required: false }
+
+          - label: "Entreprise éco-responsable (texte)"
+            name: "ecoText"
+            widget: "text"
+            required: false
+
+          - label: "Aide aux associations (texte)"
+            name: "assoText"
+            widget: "text"
+            required: false
+
+          - label: "Médias (liens vidéos)"
+            name: "media"
+            widget: "list"
+            required: false
+            allow_add: true
+            fields:
+              - { label: "Titre", name: "title", widget: "string", required: false }
+              - { label: "Plateforme", name: "platform", widget: "select", options: ["TikTok","Instagram","Facebook","YouTube","Autre"], default: "TikTok" }
+              - { label: "Lien vidéo", name: "url", widget: "string" }
+              - { label: "Image (miniature optionnelle)", name: "thumb", widget: "image", required: false }
+
+  # Partenaires
+  - name: "partners"
+    label: "Partenaires"
+    files:
+      - name: "partners"
+        label: "Liste des partenaires"
+        file: "content/partners.json"
+        format: "json"
+        fields:
+          - label: "Partenaires"
+            name: "items"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image", required: false }
+              - { label: "Lien (option)", name: "url", widget: "string", required: false }
+
+  # Galerie
+  - name: "galerie"
+    label: "Galerie Réalisations"
+    files:
+      - name: "realisations"
+        label: "Photos par catégorie"
+        file: "content/gallery.json"
+        format: "json"
+        fields:
+          - label: "Intérieur"
+            name: "interieur"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+
+          - label: "Extérieur"
+            name: "exterieur"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+
+          - label: "Avant/Après (paires)"
+            name: "avantApres"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Avant (image)", name: "before", widget: "image" }
+              - { label: "Après (image)", name: "after", widget: "image" }
+              - { label: "Titre (option)", name: "title", widget: "string", required: false }
+              - { label: "Description (option)", name: "desc", widget: "string", required: false }
