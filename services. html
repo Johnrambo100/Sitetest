@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | KAY MP Nettoyage</title>
+  <meta name="description" content="Services de nettoyage professionnel : fin de chantier, remise en état, vitres, extérieur." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logoWrap">
+          <img class="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage"
+               onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='grid';"/>
+          <div id="logoFallback" class="logoFallback" style="display:none;">
+            <span class="logoMark">🪶</span>
+            <span class="logoText">KAY MP</span>
+            <span class="logoSub">Nettoyage</span>
+          </div>
+        </div>
+        <div class="title">
+          <b>KAY MP Nettoyage</b>
+          <span>Propreté • Finitions • Réactivité</span>
+        </div>
+      </a>
+
+      <button id="burgerBtn" class="hamburger" type="button">☰</button>
+
+      <nav class="navlinks" id="navMenu">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html" class="btn primary">🚀 Devis express</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+
+    <div class="card">
+      <h1 class="h1">Nos Services</h1>
+      <p class="lead">Prestations pour particuliers & professionnels</p>
+    </div>
+
+    <div style="height:16px"></div>
+
+    <div class="split">
+      <div class="card">
+        <h2>🏗️ Fin de chantier</h2>
+        <p class="lead">Nettoyage complet après travaux, prêt à livrer.</p>
+      </div>
+
+      <div class="card">
+        <h2>✨ Remise en état</h2>
+        <p class="lead">Logements, bureaux, locaux professionnels.</p>
+      </div>
+
+      <div class="card">
+        <h2>🪟 Vitres</h2>
+        <p class="lead">Intérieur / extérieur, vitrines, baies vitrées.</p>
+      </div>
+
+      <div class="card">
+        <h2>🌿 Extérieur</h2>
+        <p class="lead">Tonte, nettoyage terrasse, évacuation déchets.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="y"></span> KAY MP Nettoyage.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
