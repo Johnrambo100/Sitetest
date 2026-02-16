@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact & Devis | KAY MP Nettoyage</title>
-  <meta name="description" content="Contactez KAY MP Nettoyage à Montauban : devis express WhatsApp, téléphone." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Contactez KAY MP Nettoyage à Montauban : WhatsApp, téléphone, formulaire de devis."/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -13,28 +13,22 @@
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-        <div class="logoWrap" id="logoWrap">
-          <img class="logoImg" id="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage" data-open-logo
-               onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='grid';" />
-          <div id="logoFallback" class="logoFallback" style="display:none;">
-            <span class="logoMark">🪶</span>
-            <span class="logoText">KAY MP</span>
-            <span class="logoSub">Nettoyage</span>
-          </div>
+        <div class="logoWrap">
+          <img class="logoImg" src="images/logo.jpg" alt="Logo" onerror="this.style.display='none'; this.parentElement.classList.add('noLogo'); this.parentElement.innerHTML='Logo';"/>
         </div>
         <div class="title">
-          <b>KAY MP Nettoyage</b>
-          <span>Propreté • Finitions • Réactivité</span>
+          <b id="siteName">KAY MP Nettoyage</b>
+          <span id="siteTagline">Propreté • Finitions • Réactivité</span>
         </div>
       </a>
 
-      <button id="burgerBtn" class="hamburger" type="button" aria-label="Menu">☰</button>
+      <button id="burgerBtn" class="hamburger" type="button">☰</button>
 
       <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
-        <a href="contact.html" class="btn primary">🚀 Devis express</a>
+        <a href="contact.html" class="btn primary active">🚀 Devis express</a>
       </nav>
     </div>
   </div>
@@ -44,19 +38,17 @@
   <div class="container">
 
     <div class="card">
-      <h1 class="h1" style="margin-bottom:6px;">Contact & devis express</h1>
+      <h1 class="h1">Contact & devis express</h1>
       <p class="lead">
         Intervention en <strong>Occitanie</strong>, surtout <strong>Montauban & alentours</strong>.
         Le plus rapide : <strong>WhatsApp</strong> (photos + surface + ville).
       </p>
 
-      <div style="height:14px"></div>
       <div class="btnrow">
         <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp : 06 44 97 28 92</a>
         <a class="btn" href="tel:+33644972892">📞 Appeler</a>
       </div>
 
-      <div style="height:14px"></div>
       <div class="notice">
         <strong>Pour un devis précis :</strong><br/>
         • Type de prestation (fin de chantier, vitres, extérieur…)<br/>
@@ -66,25 +58,65 @@
       </div>
     </div>
 
+    <div style="height:16px"></div>
+
+    <div class="split">
+      <section class="card">
+        <h2 class="h2">Formulaire (envoi direct)</h2>
+        <p class="small">Le message part directement par Formspree, sans ouvrir Gmail.</p>
+
+        <form class="form" action="https://formspree.io/f/xojnwebe" method="POST" id="contactForm">
+          <div class="formGrid">
+            <input type="text" name="Nom" placeholder="Votre nom" required>
+            <input type="tel" name="Téléphone" placeholder="Votre téléphone" required>
+            <input type="text" name="Ville" placeholder="Ville (ex : Montauban)" required>
+            <input type="text" name="Prestation" placeholder="Prestation (ex : fin de chantier / tonte)" required>
+            <textarea name="Message" placeholder="Décrivez votre besoin (surface, état, contraintes, délai...)" required></textarea>
+
+            <input type="hidden" name="_subject" value="Nouveau message - KAY MP Nettoyage">
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit" class="btn primary">📩 Envoyer</button>
+            <div class="small" id="formMsg"></div>
+          </div>
+        </form>
+      </section>
+
+      <aside class="card soft">
+        <h2 class="h2">Coordonnées</h2>
+
+        <div class="service" style="margin-bottom:12px;">
+          <div class="icon">📞</div>
+          <h3>Téléphone</h3>
+          <p><a href="tel:+33644972892">06 44 97 28 92</a></p>
+        </div>
+
+        <div class="service" style="margin-bottom:12px;">
+          <div class="icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/33644972892" target="_blank" rel="noopener">Écrire sur WhatsApp</a></p>
+        </div>
+
+        <div class="service">
+          <div class="icon">📍</div>
+          <h3>Zone</h3>
+          <p>Occitanie — Montauban & alentours</p>
+        </div>
+
+        <div class="notice">
+          <strong>Astuce :</strong> 2–3 photos + surface + ville → réponse rapide.
+        </div>
+      </aside>
+    </div>
+
   </div>
 </main>
 
 <footer class="footer">
   <div class="container">
-    <div>© <span id="y"></span> KAY MP Nettoyage.</div>
+    <div>© <span id="y"></span> <span id="footerName">KAY MP Nettoyage</span>.</div>
   </div>
 </footer>
-
-<!-- Modal logo -->
-<div class="modal" id="logoModal" aria-hidden="true">
-  <div class="modalBox">
-    <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage (grand)" onerror="this.closest('.modal').classList.remove('open');" />
-    <div class="modalBar">
-      <div class="small">Logo KAY MP Nettoyage</div>
-      <button class="closeBtn" id="closeLogo">Fermer</button>
-    </div>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
